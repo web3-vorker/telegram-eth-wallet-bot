@@ -16,49 +16,39 @@ Telegram-бот, который позволяет пользователям б
 
 🔔 Автоматическое отслеживание входящих транзакций
 
-🧠 Пароли для доступа к ключам и отправке
+## Установка
 
-📦 Сохраняет данные в SQLite
+1. Клонируйте репозиторий:
+`git clone https://github.com/your_username/ethereum-telegram-wallet-bot.git`
+`cd ethereum-telegram-wallet-bot`
 
-🛠️ Установка и запуск
-1. Клонировать репозиторий
-bash
-Копировать
-Редактировать
-git clone https://github.com/your_username/ethereum-telegram-wallet-bot.git
-cd ethereum-telegram-wallet-bot
 2. Установить зависимости
-bash
-Копировать
-Редактировать
-pip install -r requirements.txt
+
+`pip install -r requirements.txt`
+
 3. Настрой .env
+   
 Создай .env файл в корне проекта:
 
-env
-Копировать
-Редактировать
-INFURA_API_KEY=your_infura_project_id
-BOT_TOKEN=your_telegram_bot_token
+`INFURA_API_KEY=your_infura_project_id
+BOT_TOKEN=your_telegram_bot_token`
+
+
 4. Убедись, что у тебя есть файл ABI:
+
 Помести ABI от USDT в файл usdt_abi.json в корень проекта:
 
-bash
-Копировать
-Редактировать
-usdt_abi.json
+`usdt_abi.json`
+
 ABI можно получить на Etherscan в разделе "Contract" → "Contract ABI"
 
 5. Запусти бота
-bash
-Копировать
-Редактировать
-python main.py
+
+`python main.py`
+
+
 📁 Структура проекта
-bash
-Копировать
-Редактировать
-.
+
 ├── main.py                # Основной бот
 ├── wallet.py             # Логика кошелька
 ├── transaction.py        # Отправка/прием, QR
@@ -70,29 +60,25 @@ bash
 ├── usdt_abi.json         # ABI контракта USDT
 ├── requirements.txt
 └── .env
+
+
 ⚠️ Безопасность
 Приватные ключи шифруются с помощью пароля пользователя.
-
 Пароль не хранится в открытом виде.
-
 Telegram ID используется как идентификатор.
-
 Никогда не рассылайте свой приватный ключ!
+
 
 📸 Примеры
 Главное меню:
+`👋 Добро пожаловать в Ethereum Wallet!
+...`
 
-python-repl
-Копировать
-Редактировать
-👋 Добро пожаловать в Ethereum Wallet!
-...
 QR-код и адрес:
+`📥 Пополнение кошелька
+💳 Адрес: 0x...`
 
-Копировать
-Редактировать
-📥 Пополнение кошелька
-💳 Адрес: 0x...
+
 📄 Лицензия
 Этот проект распространяется под лицензией MIT. Свободен к использованию и модификации.
 
